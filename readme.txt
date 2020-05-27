@@ -1,4 +1,4 @@
-palindromes overview:
+<H1>palindromes overview:</H1>
 This is a simple spring-boot application that finds all palindromes within an
 input string and saves them in a H2 database using Hibernate.
 
@@ -17,3 +17,9 @@ input string and saves them in a H2 database using Hibernate.
 
  - [POST] /processPalindromes - Searches for all palindromes with size > 1 in a given string and saves them
     > for example: curl -X POST "http://localhost:8080/processPalindromes" -H  "accept: */*" -H  "Content-Type: application/json" -d "piuhwfgepiuohwiwuOOOpiuhwfgepiuohwiwu3244j2touih325ojn23nfkjpfeouinfeoi"
+
+4. Accessing in memory database:
+ - in your web browser navigate to http://localhost:8080/console
+ - JDBC URL: jdbc:h2:mem:palindromes
+ - username: sa
+ no password is required
