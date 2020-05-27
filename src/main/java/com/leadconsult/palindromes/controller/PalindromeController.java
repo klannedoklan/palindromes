@@ -34,7 +34,7 @@ public class PalindromeController {
         List<Palindrome> palindromes = service.getAll();
         ResponseEntity<Collection<Palindrome>> responseEntity;
         if(palindromes.isEmpty()){
-            responseEntity = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            responseEntity = ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         } else {
             responseEntity = ResponseEntity.ok(palindromes);
         }
@@ -47,7 +47,7 @@ public class PalindromeController {
         Set<String> uniquePalindromes = service.processInput(input);
         ResponseEntity<Collection<Palindrome>> responseEntity;
         if (uniquePalindromes.isEmpty()){
-            responseEntity = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            responseEntity = ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         } else {
             Set<Palindrome> palindromes = uniquePalindromes.stream()
                     .filter(s -> s.length() > 1)
