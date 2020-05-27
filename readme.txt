@@ -1,4 +1,4 @@
-<H1>palindromes overview:</H1>
+palindromes overview:
 This is a simple spring-boot application that finds all palindromes within an
 input string and saves them in a H2 database using Hibernate.
 
