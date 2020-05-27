@@ -10,7 +10,7 @@ public class Palindrome {
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true)
+    @Column
     private String value;
 
     public Palindrome() {
